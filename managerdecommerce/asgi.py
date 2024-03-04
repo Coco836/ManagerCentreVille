@@ -11,6 +11,7 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "managerdecommerce.settings")
+settings_module = "managerdecommerce.deployment" if "WEBSITE_HOSTNAME" in os.environ else "managerdecommerce.settings"
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", settings_module)
 
 application = get_asgi_application()
