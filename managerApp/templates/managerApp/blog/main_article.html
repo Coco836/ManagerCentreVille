@@ -1,0 +1,37 @@
+<div class="o-articles__main">
+  <div class="o-articles__main__card">
+    <div class="thumbnail">
+      <a
+        href="{% url 'read-article' first_articles_preview.id %}"
+        aria-hidden="true"
+        data-article-id="{{first_articles_preview.id}}"
+      >
+        <img class="left" src="{{first_articles_preview.image}}" />
+      </a>
+    </div>
+    <div class="right">
+      <h1>
+        <a
+          href="{% url 'read-article' first_articles_preview.id %}"
+          class="m-articlesCard__title"
+          >{{first_articles_preview.title}}
+        </a>
+      </h1>
+      <div class="author">
+        <img src="{{'media/images/blog/logo.svg'}}" />
+        <h2>{{first_articles_preview.author}}</h2>
+      </div>
+      <div class="separator"></div>
+      <p>{{first_articles_preview.preview}}</p>
+      <a
+        href="{% url 'read-article' first_articles_preview.id %}"
+        aria-hidden="true"
+        class="a-cta m-articlesCard__cta -gradient -transparent"
+        data-article-id="{{first_articles_preview.id}}"
+      >
+        Lire la suite &nbsp;<i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+    <h6>{{first_articles_preview.date}}</h6>
+  </div>
+</div>

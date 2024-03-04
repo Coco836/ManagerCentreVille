@@ -4,6 +4,11 @@ from django.core.mail import EmailMessage
 from .forms import ContactForm
 
 
+# Create your views here.
+def home_view(request):
+    print("HELLLOOOO WORLD")
+    return render(request, 'managerApp/accueil.html', {'active_page': 'home'})
+
 def blog_view(request):
     json_data = load_json_data()
     first_articles_preview, others_articles_preview = get_articles_preview(json_data["articles"])

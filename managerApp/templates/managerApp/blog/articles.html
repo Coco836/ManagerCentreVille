@@ -1,0 +1,41 @@
+<ul class="o-articles__list">
+  {% for article in others_articles_preview %}
+  <li class="card o-articles__card -fade" data-page="1">
+    <div class="card__header">
+      <a
+        class="m-articlesCard__imageWrapper"
+        href="{% url 'read-article' article.id %}"
+        aria-hidden="true"
+        data-article-id="{{article.id}}"
+      >
+        <img src="{{article.image}}" alt="card__image" class="card__image" />
+      </a>
+    </div>
+    <div class="card__body">
+      <span class="m-articlesCard__date tag tag-blue">{{article.date}}</span>
+      <h1>
+        <a
+          href="{% url 'read-article' article.id %}"
+          class="m-articlesCard__title"
+          >{{article.title}}</a
+        >
+      </h1>
+      <a
+        href="{% url 'read-article' article.id %}"
+        aria-hidden="true"
+        class="a-cta m-articlesCard__cta -gradient -transparent"
+        data-article-id="{{article.id}}"
+      >
+        Lire la suite &nbsp;<i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="card__footer">
+      <div class="author">
+        <img src="{{'media/images/blog/logo.svg'}}" />
+        <h2>{{first_articles_preview.author}}</h2>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
