@@ -1,0 +1,36 @@
+<header>
+  <div class="style-header"></div>
+  <nav
+    id="mainNav"
+    class="navbar navbar-desktop navbar-light bg-light nav-border-close"
+  >
+    <div class="navbar-div container-fluid d-flex align-items-center">
+      <!-- Bouton du menu burger -->
+      <button id="burgerBtn" class="burger-menu" onclick="toggleMenu()">
+        &#9776;
+        <!-- Symbole du menu burger -->
+      </button>
+      <!-- Menu de navigation -->
+      <ul id="navBarMenu" class="navBarMenu-desktop">
+        <li class="{% if active_page == 'home' %}active-page{% endif %}">
+          <a href="{% url 'home' %}"
+            ><i class="fa-solid fa-house"></i>&nbsp; Accueil</a
+          >
+        </li>
+        <li class="{% if active_page == 'blog' %}active-page{% endif %}">
+          <a href="{% url 'blog' %}"
+            ><i class="fa-solid fa-newspaper"></i>&nbsp; Blog</a
+          >
+        </li>
+        <li>
+          <a href=""><i class="fa-solid fa-user-group"></i>&nbsp; A propos</a>
+        </li>
+        <li class="{% if active_page == 'contact' %}active-page{% endif %}">
+          <a href="{% url 'contact' %}"
+            ><i class="fa-solid fa-envelope"></i>&nbsp; Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

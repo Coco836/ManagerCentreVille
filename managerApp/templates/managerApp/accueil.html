@@ -1,0 +1,586 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link href="{% static 'css/common.css' %}" rel="stylesheet" type="text/css" />
+  <link
+    href="{% static 'css/accueil.css' %}"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <body>
+    {% include "./header.html" %}
+    <main role="main" id="mainContent">
+      <section id="section0">
+        <div id="mainTitle">
+          <h1>
+            Manager de Centre-ville : Un Expert en Dynamisation Urbaine 2.0
+          </h1>
+          <p>
+            <strong>Le Manager de Centre-ville</strong> est un rôle encore flou
+            pour vous ? Découvrez son impact crucial dans la vitalité du
+            centre-ville !
+          </p>
+        </div>
+        <div id="mainVideo">
+          <video
+            width="100%"
+            controls=""
+            poster="media/images/accueil/commerce2.png"
+          >
+            <source src="media/videos/presentation.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div id="imgSection0">
+          <video
+            id="svg-mask"
+            src="media/videos/presentation.mp4"
+            autoplay
+            muted
+            class="video-clip svg-video-fill"
+          ></video>
+          <svg
+            id="visual"
+            viewBox="-87.86 -47.14 600 428.57"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+          >
+            <defs class="svg-img-fill">
+              <pattern
+                id="imageFill"
+                patternUnits="objectBoundingBox"
+                width="1"
+                height="1"
+                viewBox="0 0 1 1"
+                preserveAspectRatio="xMidYMid slice"
+              >
+                <image
+                  xlink:href="media/images/accueil/commerce2.png"
+                  preserveAspectRatio="xMidYMid slice"
+                  width="1"
+                  height="1"
+                />
+              </pattern>
+            </defs>
+            <defs class="svg-video-fill">
+              <clipPath id="svg-path">
+                <path
+                  id="clipPathPath"
+                  d="M 57.3,0.0 L 617.1,0.0 C 631.4,0.0 631.4,14.3 631.4,14.3 L 631.4,357.7 C 631.4,372.0 617.1,372.0 617.1,372.0 L 57.3,372.0 C 43.0,372.0 43.0,357.7 43.0,357.7 L 43.0,14.3 C 43.0,0.0 57.3,0.0 57.3,0.0 Z"
+                ></path>
+              </clipPath>
+            </defs>
+            <g transform="translate(350.610897 192.63842)">
+              <path
+                id="imgPresPath"
+                fill="url(#imageFill)"
+                d="M135.7 -196.4 C161.1 -168.3 157.0 -109.0 168.7 -58.3 C180.4 -7.6 208.0 34.5 198.5 64.7 C189.0 95.0 142.3 113.3 103.0 133.7 C63.8 153.9 31.9 176.2 0.2 175.9 C-31.5 175.6 -63.0 152.8 -106.2 133.8 C-149.4 114.7 -204.4 99.5 -218.9 68.0 C-233.3 36.6 -207.3 -11.2 -195.6 -68.5 C-183.9 -125.9 -186.4 -192.9 -156.2 -219.6 C-125.9 -246.1 -63.0 -232.3 -3.9 -226.9 C55.1 -221.6 110.2 -224.6 135.7 -196.4
+                "
+              ></path>
+            </g>
+            <g id="playIcon" transform="translate(304,114.285)">
+              <!-- Adjust this translate value to center the playIcon -->
+              <circle cx="45" cy="45" r="43" fill="#ffffffa1" />
+              <polygon points="36,27 67.5,45 36,63" fill="#593b34b0" />
+            </g>
+
+            <!-- <g transform="translate(-127 -27)">
+              <path
+                id="imgPresPath"
+                fill="url(#imageFill)"
+                d="M 44,0 L 828,0 C 848,0 848,20 848,20 L 848,501 C 848,521 828,521 828,521 L 44,521 C 24,521 24,501 24,501 L 24,20 C 24,0 44,0 44,0 Z
+"
+              ></path>
+            </g> -->
+            <!-- <g class="svg-video-fill" id="svg-path" transform="translate(0 0)">
+              <path
+                d="M 44,0 L 1184,0 C 1204,0 1204,20 1204,20 L 1204,501 C 1204,521 1184,521 1184,521 L 44,521 C 24,521 24,501 24,501 L 24,20 C 24,0 44,0 44,0 Z"
+                fill="none"
+              ></path>
+            </g>
+            <g
+              class="svg-img-fill"
+              transform="translate(492.610897 270.6384203155617)"
+            >
+              <path
+                d="M190.1 -275.1C225.7 -235.7 219.9 -152.6 236.3 -81.6C252.7 -10.6 291.3 48.3 278 90.6C264.7 133 199.3 158.7 144.3 187.2C89.3 215.6 44.7 246.8 0.3 246.4C-44.1 246 -88.2 214 -148.7 187.4C-209.3 160.7 -286.3 139.4 -306.6 95.3C-326.8 51.2 -290.4 -15.7 -273.9 -96C-257.5 -176.4 -261 -270.2 -218.7 -307.5C-176.3 -344.7 -88.2 -325.4 -5.5 -317.8C77.2 -310.3 154.4 -314.5 190.1 -275.1"
+                fill="url(#imageFill)"
+              ></path>
+            </g> -->
+          </svg>
+          <!-- <svg id="playIcon" width="100" height="100" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#ffffff59" />
+            <polygon points="40,30 75,50 40,70" fill="aliceblue" />
+          </svg> -->
+        </div>
+      </section>
+      <div class="nav">
+        <nav>
+          <a href="#section1" class="smooth-scroll">Redynamisation</a>
+          <a href="#section2" class="smooth-scroll">Accompagnement</a>
+          <a href="#section3" class="smooth-scroll">Observatoire</a>
+          <a href="#section4" class="smooth-scroll">Prospection</a>
+          <a href="#section5" class="smooth-scroll">Manager 2.0</a>
+        </nav>
+      </div>
+      <div class="navMobile">
+        <select id="mobileNavDropdown" onchange="navigateToSection(this.value)">
+          <option value="#section1">Redynamisation</option>
+          <option value="#section2">Accompagnement</option>
+          <option value="#section3">Observatoire</option>
+          <option value="#section4">Prospection</option>
+          <option value="#section5">Manager 2.0</option>
+        </select>
+      </div>
+      <hr />
+      <section id="section1" class="section">
+        <h2>Stratégies et Vision d’un Manager de centre-ville</h2>
+        <div class="space-intrasection-text left-align">
+          <h3>
+            Pourquoi un Manager de Centre-ville est Essentiel à la
+            Redynamisation du Centre-Ville ?
+          </h3>
+          <ul>
+            <li>
+              La redynamisation du centre-ville est une initiative clé pour
+              revigorer l'économie locale et améliorer la qualité de vie
+              urbaine. Cette démarche vise à transformer les espaces centraux en
+              zones attractives, où commerces, services et loisirs s’entremêlent
+              harmonieusement. En réinventant les rues commerçantes, on crée un
+              cadre de vie plus dynamique et inclusif, favorisant ainsi
+              l'interaction sociale et le développement économique.
+            </li>
+            <br />
+            <li>
+              Sous l’égide du manager de Centre-ville, cette transformation
+              passe par une collaboration étroite entre les autorités locales,
+              les commerçants et les résidents. Les stratégies peuvent inclure
+              l'embellissement des espaces publics, l'organisation d'évènements
+              culturels et la promotion de commerces locaux. L'objectif est de
+              créer un centre-ville vivant, accessible et sécuritaire, qui
+              reflète l'identité unique de la communauté tout en attirant de
+              nouveaux visiteurs et investisseurs.
+            </li>
+          </ul>
+        </div>
+        <div class="space-intrasection-visual image-div-container">
+          <img
+            class="image-text"
+            src="media/images/accueil/illustrations/redynamisation.png"
+            alt="Pourquoi un Manager de Centre-ville est Essentiel à la
+            Redynamisation du Centre-Ville ?"
+          />
+        </div>
+        <div class="space-intrasection-visual image-div-container">
+          <img
+            class="image-text"
+            src="media/images/accueil/illustrations/vision_strat.png"
+            alt="Comment un Manager de Centre-ville Développe-t-il une Vision
+            Stratégique pour le Centre-Ville ?"
+          />
+        </div>
+        <div class="space-intrasection-text right-align">
+          <h3>
+            Comment un Manager de Centre-ville Développe-t-il une Vision
+            Stratégique pour le Centre-Ville ?
+          </h3>
+          <ul>
+            <li>
+              Le développement d'une vision stratégique pour le centre-ville est
+              essentiel pour orienter son évolution future. Il s'agit d'un
+              processus réfléchi qui implique une analyse approfondie du tissu
+              commercial actuel et des potentiels de croissance. Cette vision
+              doit être inclusive, prenant en compte les besoins des
+              commerçants, des résidents et des visiteurs, afin de créer un
+              espace urbain équilibré et prospère.
+            </li>
+            <br />
+            <li>
+              Cette démarche stratégique inclut la définition d'objectifs
+              clairs, tels que la revitalisation des rues commerçantes,
+              l'amélioration de l'accessibilité et la promotion d'une image
+              attrayante du centre-ville. L'identification des zones à fort
+              potentiel et la mise en place de politiques favorisant les
+              investissements durables sont également cruciales. En collaborant
+              avec divers acteurs, les autorités peuvent développer des
+              stratégies innovantes pour transformer le centre-ville en un lieu
+              vibrant et accueillant.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="separator">
+        <div class="line left"></div>
+        <div class="circle"></div>
+        <div class="line right"></div>
+      </div>
+
+      <section id="section2" class="section">
+        <h2>Soutien et Accompagnement par le manager</h2>
+        <div class="center-align">
+          <h3>
+            Quel est le Rôle d'un Manager de Centre-ville dans l'Accompagnement
+            des Porteurs de Projets ?
+          </h3>
+          <ul>
+            <li>
+              L'accompagnement des porteurs de projets est crucial pour la
+              revitalisation du centre-ville. Cette démarche vise à offrir un
+              soutien personnalisé aux entrepreneurs, les guidant à travers les
+              complexités du développement d'entreprise. De la conception de
+              l'idée à sa mise en œuvre, cet accompagnement assure un suivi
+              rigoureux, garantissant une évolution saine et durable des projets
+              commerciaux.
+            </li>
+            <li>
+              Une partie essentielle de cette mission est l'aide dans la
+              compréhension et la gestion des processus administratifs. En
+              facilitant l'accès aux informations et aux ressources, les
+              porteurs de projet peuvent se concentrer sur la croissance de leur
+              entreprise. De plus, l'accès à des réseaux de financement adaptés
+              et des conseils sur mesure accroît significativement les chances
+              de succès des nouvelles entreprises.
+            </li>
+            <li>
+              Enfin, la mise en place d'initiatives de formation et de mentorat
+              renforce les capacités entrepreneuriales. Ces programmes visent à
+              doter les commerçants des compétences nécessaires pour naviguer
+              dans un environnement commercial en constante évolution. Ainsi,
+              l'accompagnement des porteurs de projets est un élément clé pour
+              injecter dynamisme et innovation au cœur du centre-ville.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="separator">
+        <div class="line left"></div>
+        <div class="circle"></div>
+        <div class="line right"></div>
+      </div>
+
+      <section id="section3" class="section">
+        <h2>Analyse et Observatoire de commerce de centre-ville</h2>
+        <div class="space-intrasection-text left-align">
+          <h3>
+            Pourquoi la Création d'un Observatoire du Commerce Nécessite-t-elle
+            un Manager de Centre-ville Expérimenté ?
+          </h3>
+          <p>
+            La création d'un Observatoire du Commerce de Centre-Ville est une
+            démarche stratégique pour le développement urbain. Cet outil permet
+            de collecter et analyser des données précieuses sur le commerce
+            local, les tendances du marché et le comportement des consommateurs.
+            En fournissant des insights réguliers, il aide les décideurs à
+            prendre des mesures éclairées pour soutenir et dynamiser le tissu
+            commercial. C'est un levier essentiel pour l'adaptation et
+            l'innovation dans la gestion des centre-ville, contribuant ainsi à
+            leur prospérité et attractivité à long terme.
+          </p>
+        </div>
+        <div class="space-intrasection-visual image-div-container">
+          <img
+            class="image-text"
+            src="media/images/accueil/illustrations/observatoire2.png"
+            alt="Analyse et Observatoire de commerce de centre-ville"
+          />
+        </div>
+      </section>
+
+      <div class="separator">
+        <div class="line left"></div>
+        <div class="circle"></div>
+        <div class="line right"></div>
+      </div>
+
+      <section id="section4" class="section">
+        <h2>Promotion de la petite ville de demain</h2>
+        <div class="space-intrasection-visual image-div-container">
+          <img
+            class="image-text"
+            src="media/images/accueil/illustrations/prospection.png"
+            alt="Promotion de la petite ville de demain
+              "
+          />
+        </div>
+
+        <div class="space-intrasection-text right-align">
+          <h3>
+            Comment la Prospection Commerciale par un Manager de Centre-ville
+            Dynamise-t-elle le Centre-Ville ?
+          </h3>
+          <p>
+            La prospection commerciale joue un rôle clé dans la revitalisation
+            du centre-ville. Elle vise à identifier et attirer de nouvelles
+            enseignes, enrichissant l'offre commerciale. Cela implique une
+            analyse minutieuse du marché, l'identification des besoins des
+            consommateurs et l'évaluation des opportunités de croissance.
+          </p>
+          <p>
+            Ce processus inclut la mise à jour régulière d'une base de données
+            commerciale et l'organisation de rencontres avec des investisseurs
+            potentiels. L'objectif est de créer un centre-ville dynamique et
+            diversifié, répondant aux attentes des résidents et attirant des
+            visiteurs.
+          </p>
+        </div>
+      </section>
+
+      <div class="separator">
+        <div class="line left"></div>
+        <div class="circle"></div>
+        <div class="line right"></div>
+      </div>
+
+      <section id="section5" class="section">
+        <h2>
+          Manager de Centre-Ville 2.0 : Une aide Numérique Multifonctionnelle
+          pour manager la petite ville de demain
+        </h2>
+        <div class="app-cards intrasection center-align flex-container">
+          <div class="app-card flex-item item-even">
+            <img
+              class="icon-app-presentation"
+              src="media/images/accueil/plateforme-citoyens.png"
+              alt="Plateforme Complète pour les Citoyens"
+            />
+            <h3>Plateforme Complète pour les Citoyens</h3>
+            <p>
+              L'application conçue pour les citoyens dans le cadre du projet
+              Centre-Ville 2.0 est une véritable innovation. Elle regroupe
+              toutes les informations nécessaires sur les commerces,
+              associations, hébergements, services municipaux, et le patrimoine
+              de la ville. Elle offre également la possibilité de découvrir les
+              évènements locaux avec l'option de recevoir des alertes SMS pour
+              ne rien manquer d'important. Cette application est un guichet
+              unique pour tout savoir sur la vie locale, simplifiant l'accès à
+              l'information pour les résidents et les visiteurs.
+            </p>
+            <div class="play-demo-div">
+              <p class="play-demo plateforme-citoyens">
+                <i class="fa-solid fa-play"></i>&nbsp Voir la démo
+              </p>
+            </div>
+            <!-- <video width="320" height="240" controls>
+              <source src="./demos/accueil.mov" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> -->
+          </div>
+          <div class="app-card flex-item item-odd">
+            <img
+              class="icon-app-presentation"
+              src="media/images/accueil/gestionnaire-event.png"
+              alt="Gestionnaire d'évènements"
+            />
+            <h3>Gestionnaire d'Évènements</h3>
+            <p>
+              Un élément clé de l'application est son gestionnaire d'évènements
+              intégré. Centré autour d'un calendrier interactif, il permet aux
+              associations, commerçants et à la mairie de planifier et de
+              promouvoir leurs évènements. Les utilisateurs peuvent consulter le
+              calendrier pour être informé des activités à venir, facilitant la
+              participation communautaire et l'engagement local.
+            </p>
+            <div class="play-demo-div">
+              <p class="play-demo gestion-events">
+                <i class="fa-solid fa-play"></i>&nbsp Voir la démo
+              </p>
+            </div>
+          </div>
+          <div class="app-card flex-item item-even">
+            <img
+              class="icon-app-presentation"
+              src="media/images/accueil/observatoire-commerce.png"
+              alt="Observatoire de Commerce"
+            />
+            <h3>Observatoire de Commerce</h3>
+            <p>
+              L'application inclut également un module dédié aux statistiques et
+              à l'observation. Il permet de suivre les tendances commerciales,
+              les habitudes de consommation. Cette fonctionnalité est
+              essentielle pour les commerçants et les décideurs locaux, leur
+              fournissant des données précieuses pour mieux comprendre et
+              répondre aux besoins de la communauté.
+            </p>
+            <div class="play-demo-div">
+              <p class="play-demo observatoire-commerce">
+                <i class="fa-solid fa-play"></i>&nbsp Voir la démo
+              </p>
+            </div>
+          </div>
+          <div class="app-card flex-item item-odd">
+            <img
+              class="icon-app-presentation"
+              src="media/images/accueil/intelligence-artificielle.png"
+              alt="Intelligence Artificielle pour l'Analyse Commerciale"
+            />
+            <h3>Intelligence Artificielle pour l'Analyse Commerciale</h3>
+            <p>
+              Un aspect innovant de l'application est l'utilisation de
+              l'intelligence artificielle pour analyser les besoins commerciaux
+              de la ville. En fonction des caractéristiques démographiques, du
+              niveau de revenu de la population et d'autres données, l'IA
+              propose des idées de nouveaux commerces susceptibles de prospérer.
+              Elle aide également à gérer les vacances commerciales, assurant
+              une dynamique commerciale équilibrée et diversifiée.
+            </p>
+            <div class="play-demo-div">
+              <p class="play-demo analyse-commerciale">
+                <i class="fa-solid fa-play"></i>&nbsp Voir la démo
+              </p>
+            </div>
+          </div>
+          <div class="app-card flex-item item-even">
+            <img
+              class="icon-app-presentation"
+              src="media/images/accueil/formation-commerce.png"
+              alt="Accès aux Formations pour les Commerçants"
+            />
+            <h3>Introduction aux Formations en Management de Centre-Ville</h3>
+            <p>
+              Découvrez les formations en France de management de centre-ville,
+              conçues pour les futurs professionnels et ceux en reconversion.
+              Avec une approche avant-gardiste, les programmes offrent une
+              combinaison unique de théorie et de pratique, encadrés par des
+              experts du domaine. Que ce soit à travers un diplôme universitaire
+              innovant ou un certificat de compétences à distance, bénéficiez
+              d'une formation flexible et adaptée aux enjeux actuels des centres
+              urbains.
+            </p>
+            <div class="details-formation-div">
+              <p class="details-formation">
+                <i class="fa-solid fa-quote-left"></i>&nbsp Voir les formations
+                existantes
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modal -->
+    </main>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+    <template id="formationTemplate">
+      <div id="formationDetails">
+        <h2>
+          Formation en Management de Centre-Ville : Votre Chemin vers
+          l'Excellence Professionnelle
+        </h2>
+
+        <h3>
+          Développeur Manager de Centre-Ville : Un Diplôme Universitaire
+          Innovant
+        </h3>
+
+        <p>
+          <strong> Le Développeur Manager de Centre-Ville </strong> représente
+          une formation avant-gardiste, conçue pour combler le fossé entre le
+          monde du commerce et les élus locaux. Cette initiative est portée par
+          <strong> Centre-Ville en Mouvement</strong>, un organisme dédié à la
+          dynamisation des centres urbains.
+        </p>
+
+        <h4>Une Formation Pertinente et Connectée au Terrain</h4>
+
+        <p>
+          Les participants bénéficient d'une formation qui met l'accent sur la
+          pratique. Encadrés par des professionnels chevronnés, tels que des
+          managers de centre-ville en activité, consultants en urbanisme
+          commercial, et chercheurs, les étudiants et professionnels en
+          reconversion acquièrent des compétences spécifiques au management
+          urbain.
+        </p>
+
+        <h5>Caractéristiques Clés du Programme</h5>
+        <p>
+          <strong>Alternance et Flexibilité</strong> : Les cours se déroulent en
+          alternance, offrant une combinaison de théorie et de pratique. <br />
+          <strong>Accès et Inscriptions</strong> : Ouvert pour les étudiants en
+          3ème année et les personnes en reconversion. Les inscriptions pour la
+          rentrée 2021 sont ouvertes. <br />
+          <strong>Réseau et Expertise</strong> : L'accès à un réseau d'échanges
+          et de réflexion autour des problématiques urbaines actuelles.
+        </p>
+        <h4>Contacts et Informations</h4>
+
+        <p>
+          <strong>Centre-Ville en Mouvement</strong> : Albane Réal, Directrice
+          des Opérations, albane.real@centre-ville.org, 01.47.21.50.40 <br />
+          <strong>IAE CAEN</strong> : Cécile Duval, Adjointe/Conseillère
+          Formation Continue, Programme Qualif et Cycle accéléré,
+          celine.duval@unicaen.fr, 02.31.56.65.12
+        </p>
+        <hr />
+        <h3>
+          Certificat de Compétences Manager de Centre-Ville : Une Formation à
+          Distance Innovante
+        </h3>
+
+        <h4>Un Programme Complet avec ISC Paris Executive Education</h4>
+
+        <p>
+          Le
+          <strong> Certificat de Compétences Manager de Centre-Ville</strong>,
+          en partenariat avec le CMCV et l'ISC Paris, est conçu pour fournir une
+          compréhension exhaustive du métier de Manager de Centre-Ville.
+        </p>
+
+        <h5>Points Forts du Certificat</h5>
+        <p>
+          <strong>Modalité d'Enseignement Flexible</strong> : La formation
+          combine 160 heures de cours, dont 100 heures en direct et 60 heures en
+          mode asynchrone, permettant une étude à distance efficace. <br />
+          <strong>Approche Pragmatique et Actualisée</strong> : Le cursus
+          intègre les dernières évolutions légales et pratiques, telles que la
+          Loi Climat et Résilience, offrant des outils et des solutions
+          pratiques. <br />
+          <strong>Développement de Compétences Ciblées</strong> : Les
+          participants développent des compétences clés pour un diagnostic
+          complet et l'élaboration de stratégies commerciales pour des
+          territoires spécifiques.
+        </p>
+        <h4>Informations Pratiques et Contacts</h4>
+
+        <p>
+          <strong>Durée et Rythme</strong> : La prochaine session débutera en
+          Mars 2024, avec un rythme adaptable à la vie professionnelle. <br />
+          <strong>Coût et Financement</strong> : Le coût varie selon le mode de
+          financement, avec des options pour les financements personnels et
+          employeurs. <br />
+          <strong>Candidature et Contact</strong> : Pour plus d'informations ou
+          pour candidater, contactez le service formation continue de l'ISC
+          Paris au 01 40 53 99 99 ou par email à formationpro@iscparis.com.
+          <br />
+          <strong>Responsable Executive Education ISC Paris</strong>
+          : Sylvie CLARKE, sclarke@iscparis.com, 01 40 53 79 26 / 06 64 53 63 23
+        </p>
+      </div>
+    </template>
+    <canvas id="canvas"></canvas>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/flubber"></script>
+  <script src="{% static 'js/common.js' %}" type="module"></script>
+  <script src="{% static 'js/accueil.js' %}" type="module"></script>
+</html>

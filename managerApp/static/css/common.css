@@ -1,0 +1,273 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  font-family: sans-serif;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* MAIN */
+#mainContent {
+  padding: 0 20px 20px 20px;
+  border-radius: 0 20px 20px 20px;
+  position: relative;
+  z-index: 2;
+  background-color: rgb(255 255 255 / 70%);
+  backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 1539px) {
+  #mainContent {
+    margin: 12px 15px 15px 15px;
+  }
+}
+
+@media screen and (max-width: 1313px) {
+  #mainContent {
+    border-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #mainContent {
+    margin: 50px 150px 150px 150px;
+  }
+}
+
+@media screen and (min-width: 1858px) {
+  #mainContent {
+    width: 1504px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header {
+    width: 1504px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  .style-header {
+    left: calc((100% - 1524px));
+    width: 34.5%;
+  }
+
+  #mainNav.navbar-desktop {
+    width: 65.5%;
+    left: calc((100% - 1524px) + 35%);
+    right: 0;
+  }
+}
+
+/* --------- Header --------- */
+/* Version PC */
+.navbar-desktop {
+  position: absolute;
+  height: 60px;
+  z-index: 3;
+  display: flex;
+  margin-top: -50px;
+  box-shadow: -2px 3px 4px 0 rgb(94 131 151);
+  backdrop-filter: blur(106px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 15px 15px 15px 0;
+  background: #1d5f5fbd;
+  padding: 1rem;
+  align-items: center;
+  /* left: 150px; */
+  width: calc(61% - 150px);
+  right: 150px;
+  border-radius: 15px;
+}
+
+.navbar-mobile {
+  position: fixed;
+  right: 17px;
+  padding: 24px;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  top: 17px;
+  box-shadow: 0 2px 26px 0 rgb(94 131 151);
+  backdrop-filter: blur(106px);
+  -webkit-backdrop-filter: blur(13px);
+  background: #1d5f5fbd;
+  border-radius: 44px;
+}
+
+.navBarMenu-desktop {
+  display: flex;
+  padding-inline-start: 0;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navBarMenu-mobile {
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0;
+  height: 100%;
+  display: flex;
+  place-content: space-evenly;
+}
+
+.navBarMenu-desktop li {
+  padding: 8px;
+  list-style: none;
+  padding: 10px 20px 10px 20px;
+}
+
+.navBarMenu-mobile li {
+  padding: 10px; /* Ajustez selon vos besoins */
+  text-align: left;
+  list-style: none;
+  padding: 10px;
+}
+
+#mainNav li.active-page,
+#mainNav li:hover {
+  background-color: rgb(255 255 255 / 70%);
+  border-radius: 30px;
+  a {
+    color: #1d5f5f;
+  }
+}
+
+@media screen and (min-width: 1314px) and (max-width: 1857px) {
+  div.style-header {
+    left: 150px;
+    width: calc(100% - 300px - (61% - 110px));
+  }
+}
+
+@media screen and (min-width: 1314px) {
+  div.style-header {
+    background-color: rgb(255 255 255 / 70%);
+    position: relative;
+    z-index: 3;
+    display: flex;
+    margin-top: 5px;
+    border-radius: 15px 15px 0 0;
+    height: 100px;
+    margin-bottom: -50px;
+    backdrop-filter: blur(5px);
+  }
+}
+header .navbar-div {
+  display: flex;
+  width: 100%;
+}
+
+header .navbar-brand {
+  font-size: 24px;
+  text-align: center;
+  color: #0f3654 !important;
+  margin-right: 0;
+}
+
+header .navbar-toggler {
+  right: 15px;
+  background-color: #0f3654;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #ffff;
+  font-size: 18px;
+}
+
+/* Version Mobile */
+.burger-menu {
+  display: none;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  transition: transform 0.3s ease-in-out;
+  font-size: 30px; /* Taille du symbole du menu burger */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white; /* Couleur du symbole du menu burger */
+}
+.burger-menu.change {
+  transform: rotate(90deg); /* Rotation pour l'effet */
+}
+/* Affiche le menu lorsque .showMenu est ajouté */
+.closeMenu {
+  display: none;
+}
+
+.show-menu-radius {
+  border-radius: 20px;
+}
+
+.show-menu-desktop-radius {
+  border-radius: 15px;
+}
+
+/* Média query pour les appareils mobiles */
+@media screen and (max-width: 1313px) {
+  /* Affichage du bouton burger en mode mobile */
+  .burger-menu {
+    display: block;
+  }
+  /* Cache le menu de navigation par défaut en mode mobile */
+  .showMenu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  section {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.d-block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
