@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 ALLOWED_HOSTS = [os.environ.get("WEBSITE_HOSTNAME")]
 CSRF_TRUSTED_ORIGINS = ["https://" + os.environ.get("WEBSITE_HOSTNAME")]
-DEBUG = True
+DEBUG = False
 
 
 # Application definition
