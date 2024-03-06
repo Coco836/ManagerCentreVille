@@ -19,21 +19,23 @@ MIDDLEWARE = [
 ]
 
 # STATIC AND MEDIA FILES CONFIG
-AZURE_ACCOUNT_NAME = os.environ["AZURE_ACCOUNT_NAME"]
-AZURE_ACCOUNT_KEY = os.environ["AZURE_ACCOUNT_KEY"]
-AZURE_CONTAINER = os.environ["AZURE_CONTAINER"]
+# AZURE_ACCOUNT_NAME = os.environ["AZURE_ACCOUNT_NAME"]
+# AZURE_ACCOUNT_KEY = os.environ["AZURE_ACCOUNT_KEY"]
+# AZURE_CONTAINER = os.environ["AZURE_CONTAINER"]
 
-DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+# STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
-AZURE_URL_EXPIRATION_SECS = 3600
+# AZURE_URL_EXPIRATION_SECS = 3600
 
-STATIC_LOCATION = "static"
-MEDIA_LOCATION = "media"
+# STATIC_LOCATION = "static"
+# MEDIA_LOCATION = "media"
 
-STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{STATIC_LOCATION}/'
-MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/'
+# STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{STATIC_LOCATION}/'
+# MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # EMAIL SERVER CONFIG
 EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND")
