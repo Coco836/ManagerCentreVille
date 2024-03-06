@@ -18,13 +18,24 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC AND MEDIA FILES CONFIG
+AZURE_ACCOUNT_NAME = os.environ["AZURE_ACCOUNT_NAME"]
+AZURE_ACCOUNT_KEY = os.environ["AZURE_ACCOUNT_KEY"]
+AZURE_CONTAINER = os.environ["AZURE_CONTAINER"]
 
-# Configuration des médias
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
+AZURE_URL_EXPIRATION_SECS = 3600
+
+STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
+
+STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{STATIC_LOCATION}/'
+MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{MEDIA_LOCATION}/'
+
+
+# EMAIL SERVER CONFIG
 EMAIL_BACKEND = os.environ.get("EMAIL_BACKEND")
 EMAIL_HOST = os.environ.get("EMAIL_HOST")
 EMAIL_PORT = os.environ.get("EMAIL_PORT")
