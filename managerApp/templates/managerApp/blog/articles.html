@@ -1,3 +1,4 @@
+{% load static %}
 <ul class="o-articles__list">
   {% for article in others_articles_preview %}
   <li class="card o-articles__card -fade" data-page="1">
@@ -8,7 +9,11 @@
         aria-hidden="true"
         data-article-id="{{article.id}}"
       >
-        <img src="{{article.image}}" alt="card__image" class="card__image" />
+        <img
+          src="{% static article.image %}"
+          alt="card__image"
+          class="card__image"
+        />
       </a>
     </div>
     <div class="card__body">

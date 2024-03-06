@@ -38,7 +38,7 @@
             </p>
           </div>
           <div class="article__header-img">
-            <img src="../../{{article.image}}" alt="{{article.title}}" />
+            <img src="{% static article.image %}" alt="{{article.title}}" />
           </div>
         </div>
       </section>
@@ -60,7 +60,7 @@
                     data-article-id="{{latest_article.id}}"
                   >
                     <img
-                      src="../../{{latest_article.image}}"
+                      src="{% static latest_article.image %}"
                       alt="card__image"
                       class="card__image"
                       width="600"

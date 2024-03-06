@@ -1,3 +1,4 @@
+{% load static %}
 <div class="o-articles__main">
   <div class="o-articles__main__card">
     <div class="thumbnail">
@@ -6,7 +7,7 @@
         aria-hidden="true"
         data-article-id="{{first_articles_preview.id}}"
       >
-        <img class="left" src="{{first_articles_preview.image}}" />
+        <img class="left" src="{% static first_articles_preview.image %}" />
       </a>
     </div>
     <div class="right">
