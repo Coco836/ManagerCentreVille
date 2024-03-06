@@ -32,7 +32,7 @@ STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"
 
 STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{STATIC_LOCATION}/'
-MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{MEDIA_LOCATION}/'
+MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/'
 
 
 # EMAIL SERVER CONFIG
