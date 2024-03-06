@@ -51,7 +51,7 @@ function setupModalEventListeners() {
             item.classList.contains(key)
           );
           if (key) {
-            content = `<video width="100%" controls poster="media/images/accueil/poster-${key}.png"><source src=media/videos/${videoInfo[key]} type="video/mp4">Your browser does not support the video tag.</video>`;
+            content = `<video width="100%" controls poster="static/images/accueil/poster-${key}.png"><source src=static/videos/${videoInfo[key]} type="video/mp4">Your browser does not support the video tag.</video>`;
             openModal("video", content);
           }
         } else {
