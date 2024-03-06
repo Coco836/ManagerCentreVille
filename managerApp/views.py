@@ -6,7 +6,6 @@ from .forms import ContactForm
 
 # Create your views here.
 def home_view(request):
-    print("HELLLOOOO WORLD")
     return render(request, 'managerApp/accueil.html', {'active_page': 'home'})
 
 def blog_view(request):

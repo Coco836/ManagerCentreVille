@@ -47,7 +47,7 @@ jobs:
           echo "AZURE_CONTAINER=${{ secrets.AZURE_CONTAINER }}" >> $GITHUB_ENV
 
       - name: Run collectstatic
-        run: python manage.py collectstatic --noinput
+        run: python manage.py collectstatic --noinput --settings=managerdecommerce.deployment
 
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
