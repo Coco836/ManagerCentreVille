@@ -73,11 +73,16 @@ section h2 {
     position: absolute;
     width: 52%;
     top: 150px;
+    z-index: 1;
   }
 }
 
 #mainTitle p {
   font-size: large;
+}
+
+#mainTitle a {
+  color: #3987a6;
 }
 
 @keyframes scale-section0-text {
