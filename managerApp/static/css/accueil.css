@@ -677,6 +677,10 @@ clipPath path {
   }
 }
 
+.yt-demos {
+  height: 60vh;
+}
+
 video {
   border-radius: 15px;
 }

@@ -42,16 +42,22 @@ function setupModalEventListeners() {
         let content = "";
         if (item.classList.contains("play-demo")) {
           const videoInfo = {
-            "plateforme-citoyens": "plateforme-citoyens.mp4",
-            "gestion-events": "gestion-events.mp4",
-            "observatoire-commerce": "observatoire-commerce.mp4",
-            "analyse-commerciale": "analyse-commerciale.mp4",
+            "plateforme-citoyens":
+              "https://www.youtube.com/embed/9vcHJTbel9s?&mute=1",
+            "gestion-events":
+              "https://www.youtube.com/embed/uefDxXB35bQ?&mute=1",
+            "observatoire-commerce":
+              "https://www.youtube.com/embed/W9gOhIsv6HQ?&mute=1",
+            "analyse-commerciale":
+              "https://www.youtube.com/embed/LidD6Dpr6SU?&mute=1",
           };
           const key = Object.keys(videoInfo).find((key) =>
             item.classList.contains(key)
           );
           if (key) {
-            content = `<video width="100%" controls poster="{% static 'images/accueil/poster-${key}.png' %}"><source src=static/videos/${videoInfo[key]} type="video/mp4">Your browser does not support the video tag.</video>`;
+            // content = `<video width="100%" controls poster="{% static 'images/accueil/poster-${key}.png' %}"><source src=static/videos/${videoInfo[key]} type="video/mp4">Your browser does not support the video tag.</video>`;
+            content = `<iframe class="yt-demos" width="100%" src="${videoInfo[key]}" title="Manager Centre Ville" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+
             openModal("video", content);
           }
         } else {
