@@ -10,6 +10,7 @@
         data-article-id="{{article.id}}"
       >
         <img
+          loading="lazy"
           src="{% static article.image %}"
           alt="card__image"
           class="card__image"
@@ -37,7 +38,7 @@
 
     <div class="card__footer">
       <div class="author">
-        <img src="{% static 'images/blog/logo.svg' %}" />
+        <img loading="lazy" src="{% static 'images/blog/logo.svg' %}" />
         <h2>{{first_articles_preview.author}}</h2>
       </div>
     </div>

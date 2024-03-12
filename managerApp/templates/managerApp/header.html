@@ -1,9 +1,6 @@
 <header>
   <div class="style-header"></div>
-  <nav
-    id="mainNav"
-    class="navbar navbar-desktop navbar-light bg-light nav-border-close"
-  >
+  <nav id="mainNav" class="navbar navbar-light bg-light nav-border-close">
     <div class="navbar-div container-fluid d-flex align-items-center">
       <!-- Bouton du menu burger -->
       <button id="burgerBtn" class="burger-menu" onclick="toggleMenu()">
@@ -11,7 +8,7 @@
         <!-- Symbole du menu burger -->
       </button>
       <!-- Menu de navigation -->
-      <ul id="navBarMenu" class="navBarMenu-desktop">
+      <ul id="navBarMenu" class="">
         <li class="{% if active_page == 'home' %}active-page{% endif %}">
           <a href="{% url 'home' %}"
             ><i class="fa-solid fa-house"></i>&nbsp; Accueil</a

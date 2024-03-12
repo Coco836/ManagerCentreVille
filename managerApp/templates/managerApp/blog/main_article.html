@@ -7,7 +7,11 @@
         aria-hidden="true"
         data-article-id="{{first_articles_preview.id}}"
       >
-        <img class="left" src="{% static first_articles_preview.image %}" />
+        <img
+          class="left"
+          loading="lazy"
+          src="{% static first_articles_preview.image %}"
+        />
       </a>
     </div>
     <div class="right">
@@ -19,7 +23,7 @@
         </a>
       </h1>
       <div class="author">
-        <img src="{% static 'images/blog/logo.svg' %}" />
+        <img loading="lazy" src="{% static 'images/blog/logo.svg' %}" />
         <h2>{{first_articles_preview.author}}</h2>
       </div>
       <div class="separator"></div>
