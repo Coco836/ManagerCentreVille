@@ -167,6 +167,8 @@ canvas {
 header .navbar-div {
   display: flex;
   width: 100%;
+}
+.nav-border-close .navbar-div {
   place-content: center;
 }
 
@@ -226,6 +228,15 @@ header nav a {
     display: flex;
     flex-direction: column;
   }
+}
+
+.nav-border-open .navbar-div {
+  place-content: flex-end;
+  align-items: start !important;
+}
+
+.nav-border-open .burger-menu {
+  margin: -17px;
 }
 
 section {
