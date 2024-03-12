@@ -69,6 +69,7 @@ canvas {
 }
 
 /* --------- Header --------- */
+/* CSS pour cacher le menu desktop sur les appareils mobiles par défaut */
 /* Version PC */
 .navbar-desktop {
   position: absolute;
@@ -219,6 +220,9 @@ header nav a {
 
 /* Média query pour les appareils mobiles */
 @media screen and (max-width: 1313px) {
+  #mainNav {
+    display: none;
+  }
   /* Affichage du bouton burger en mode mobile */
   .burger-menu {
     display: block;
