@@ -167,6 +167,7 @@ canvas {
 header .navbar-div {
   display: flex;
   width: 100%;
+  place-content: center;
 }
 
 header .navbar-brand {
@@ -191,8 +192,6 @@ header nav a {
 .burger-menu {
   display: none;
   position: absolute;
-  right: 5px;
-  top: 4px;
   transition: transform 0.3s ease-in-out;
   font-size: 30px; /* Taille du symbole du menu burger */
   background: none;
