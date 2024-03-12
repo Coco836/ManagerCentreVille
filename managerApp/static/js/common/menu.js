@@ -35,7 +35,7 @@ function handleNavBar() {
     menu.classList.add("navBarMenu-mobile");
     mainNav.classList.add("navbar-mobile");
     mainNav.classList.remove("navbar-desktop");
-    mainNav.style.display = "block";
+    mainNav.style.display = "flex";
   } else {
     // menu.classList.add("showMenu");
     menu.classList.remove("closeMenu");
@@ -43,7 +43,7 @@ function handleNavBar() {
     menu.classList.remove("navBarMenu-mobile");
     mainNav.classList.remove("navbar-mobile");
     mainNav.classList.add("navbar-desktop");
-    mainNav.style.display = "block";
+    mainNav.style.display = "flex";
   }
 }
 
