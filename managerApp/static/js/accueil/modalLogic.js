@@ -55,7 +55,7 @@ function setupModalEventListeners() {
             item.classList.contains(key)
           );
           if (key) {
-            // content = `<video width="100%" controls poster="{% static 'images/accueil/poster-${key}.png' %}"><source src=static/videos/${videoInfo[key]} type="video/mp4">Your browser does not support the video tag.</video>`;
+            // content = `<video width="100%" controls poster="{% static 'images/accueil/poster-${key}.webp' %}"><source src=static/videos/${videoInfo[key]} type="video/mp4">Your browser does not support the video tag.</video>`;
             content = `<iframe class="yt-demos" loading="lazy" width="100%" src="${videoInfo[key]}" title="Manager Centre Ville" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
 
             openModal("video", content);
