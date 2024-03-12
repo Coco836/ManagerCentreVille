@@ -236,7 +236,7 @@ clipPath path {
 }
 
 #section2 h2,
-#section5 h2 {
+#section6 h2 {
   margin-bottom: calc(0.83em + 45px);
 }
 
@@ -542,6 +542,16 @@ clipPath path {
   font-size: 15px;
 }
 
+/* .item-solo {
+  border-radius: 20px;
+  background-color: #38a69f;
+} */
+
+.item-solo {
+  border-radius: 20px;
+  border: 5px solid #38a69f;
+}
+
 .item-even {
   border-radius: 20px;
   /* background-color: #b8ecf3; */
@@ -554,6 +564,8 @@ clipPath path {
   background-color: #593b3478;
 }
 
+/* .item-solo h3,
+.item-solo p, */
 .item-even h3,
 .item-even p,
 .item-odd h3,
