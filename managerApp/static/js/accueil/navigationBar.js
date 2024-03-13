@@ -1,6 +1,34 @@
 export function navigateToSection(sectionId) {
-  window.location.href = sectionId;
+  window.location.hash = sectionId;
 }
+
+$(window).on("scroll", function () {
+  // Récupérez la position actuelle de la page avec un ajustement pour une meilleure détection
+  const scrollPosition = $(window).scrollTop() + 150;
+
+  // Supposons que menuHeight est la hauteur de votre menu/nav si nécessaire pour les calculs
+  const menuHeight = $(".nav").outerHeight() || 0; // Ajustez l'ID selon votre menu
+
+  // Votre sélecteur est différent puisque vous travaillez avec un <select>, donc récupérez les options
+  const selectOptions = $("#mobileNavDropdown option");
+
+  selectOptions.each(function () {
+    const targetId = $(this).val(); // L'attribut "value" des options contient l'ID de la section
+    const targetElement = $(targetId);
+
+    if (targetElement.length) {
+      // Vérifiez si la section correspondante est visible à l'écran
+      if (
+        targetElement.offset().top - menuHeight <= scrollPosition &&
+        targetElement.offset().top + targetElement.height() - menuHeight >
+          scrollPosition
+      ) {
+        // Mettez à jour la valeur du <select> pour correspondre à l'option actuellement visible
+        $("#mobileNavDropdown").val(targetId);
+      }
+    }
+  });
+});
 
 // ONE PAGE NAVIGATION
 
