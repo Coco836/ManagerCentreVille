@@ -23,6 +23,9 @@ def read_article_view(request, article_id):
     latest_articles_preview = get_latest_articles_preview(articles["articles"], article_id)
     return render(request, 'managerApp/read_article.html', {'active_page': 'blog', 'article': article, 'latest_articles_preview': latest_articles_preview})
 
+def about_view(request):
+    return render(request, 'managerApp/about.html', {'active_page': 'about'})
+
 def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
