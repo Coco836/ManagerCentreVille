@@ -650,9 +650,19 @@ clipPath path {
 .close {
   color: white;
   float: right;
-  font-size: 30px;
+  font-size: 25px;
   margin-top: -10px;
   margin-bottom: 10px;
+  right: 13.5%;
+  padding: 5px 14px 8px 14px;
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  box-shadow: 0 2px 26px 0 rgb(94 131 151);
+  backdrop-filter: blur(106px);
+  -webkit-backdrop-filter: blur(13px);
+  background: #1d5f5fbd;
+  border-radius: 44px;
 }
 
 .close:hover,
