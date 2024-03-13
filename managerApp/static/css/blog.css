@@ -84,7 +84,7 @@ section {
 @media screen and (max-width: 460px) {
   .o-articles__main__card {
     grid-template-rows: repeat(3, auto);
-    margin-top: 300px;
+    margin-top: 338px;
   }
 }
 
