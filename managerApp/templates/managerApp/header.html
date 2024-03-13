@@ -22,8 +22,10 @@
             ><i class="fa-solid fa-newspaper"></i>&nbsp; Blog</a
           >
         </li>
-        <li>
-          <a href=""><i class="fa-solid fa-user-group"></i>&nbsp; A propos</a>
+        <li class="{% if active_page == 'about' %}active-page{% endif %}">
+          <a href="{% url 'about' %}"
+            ><i class="fa-solid fa-user-group"></i>&nbsp; A propos</a
+          >
         </li>
         <li class="{% if active_page == 'contact' %}active-page{% endif %}">
           <a href="{% url 'contact' %}"
