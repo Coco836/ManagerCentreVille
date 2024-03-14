@@ -55,22 +55,54 @@ svg#visual {
 }
 
 #aboutUsImg {
-  /* width: 57%; */
   place-self: center;
-  margin-left: -90px;
+  /* margin-left: -90px; */
 }
 
-#aboutUsImg img {
-  width: 100%;
-  border: 5px solid #ee6e73;
-  border-left: 0;
+@media screen and (min-width: 601px) {
+  #aboutUsImg {
+    width: 57%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  svg#visual {
+    width: 313px;
+    height: 345px;
+  }
 }
 
 #aboutUsStart {
   width: 100%;
   align-self: center;
+  h1 {
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    margin: 12px 15px 40px 15px;
+    color: white;
+  }
+  p {
+    color: white;
+  }
 }
 
-/* #aboutUsPresentation {
+.poster-about {
   width: 100%;
-} */
+  z-index: -1;
+  height: 430px;
+  background-color: #1d5f5fbd;
+  position: absolute;
+  top: 3%;
+  left: 0;
+}
+
+@media screen and (max-width: 1424px) {
+  .poster-about {
+    top: 1%;
+  }
+}
+
+#aboutUsPresentation {
+  margin-top: 70px;
+}
