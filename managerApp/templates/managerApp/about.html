@@ -33,23 +33,64 @@
     {% include "./header.html" %}
     <main role="main" id="mainContent">
       <section id="aboutUs">
-        <!-- <div id="aboutUsImg">
-          <img
+        <!-- <div class="poster-about">
+          <h1>A propos de nous</h1>
+        </div> -->
+        <div id="aboutUsFirst">
+          <div id="aboutUsImg">
+            <svg
+              id="visual"
+              viewBox="0 0 455 511"
+              width="678"
+              height="500"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+            >
+              <defs class="svg-img-fill">
+                <pattern
+                  id="imageFill"
+                  patternUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                  viewBox="0 0 1 1"
+                  preserveAspectRatio="xMidYMid slice"
+                >
+                  <image
+                    xlink:href="{% static 'images/about/about_illustration.png' %}"
+                    preserveAspectRatio="xMidYMid slice"
+                    width="1"
+                    height="1"
+                  />
+                </pattern>
+              </defs>
+              <g transform="translate(203.711761 266.368768)">
+                <path
+                  d="M173.4 -205.9C218.2 -169 243.5 -108.2 248.3 -48.6C253.1 11.1 237.4 69.5 205 111.4C172.5 153.3 123.4 178.6 69.4 203.9C15.5 229.3 -43.2 254.7 -77.2 233.2C-111.3 211.7 -120.6 143.3 -138.9 90.5C-157.2 37.6 -184.5 0.1 -180.1 -32.9C-175.7 -66 -139.6 -94.7 -104.3 -133.3C-69 -171.9 -34.5 -220.4 14.9 -238.2C64.3 -255.9 128.6 -242.9 173.4 -205.9"
+                  fill="url(#imageFill)"
+                ></path>
+              </g>
+            </svg>
+            <!-- <img
             src="{% static 'images/about/about_illustration.png' %}"
             alt="A propos illustration"
-          />
-        </div> -->
-        <div id="aboutUsPresentation">
-          <h1>Qui sommes-nous ?</h1>
-          <p>
-            Au carrefour de la <strong>revitalisation urbaine</strong> et de
-            l'<strong>innovation technologique</strong>, notre application est
-            le fruit d'une vision novatrice portée par un
-            <strong>manager de centre-ville</strong> expérimenté et la société
-            Linkco spécialisé dans le data scientist et l'intelligence
-            artificielle
-          </p>
+          /> -->
+          </div>
+          <div id="aboutUsStart">
+            <h1>Qui sommes-nous ?</h1>
+            <p>
+              Au carrefour de la <strong>revitalisation urbaine</strong> et de
+              l'<strong>innovation technologique</strong>, notre application est
+              le fruit d'une vision novatrice portée par un
+              <strong>manager de centre-ville</strong> expérimenté et la société
+              Linkco spécialisé dans le data scientist et l'intelligence
+              artificielle
+            </p>
+          </div>
+        </div>
 
+        <div id="aboutUsPresentation">
           <h2>Mission et Vision</h2>
           <p>
             Notre mission est claire : transformer chaque centre-ville en un
