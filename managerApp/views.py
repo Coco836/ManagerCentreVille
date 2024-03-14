@@ -47,3 +47,6 @@ def contact_view(request):
     else:
         form = ContactForm()
     return render(request, 'managerApp/contact.html', {'active_page': 'contact', 'form': form})
+
+def legal_mention_view(request):
+    return render(request, 'managerApp/legal_mention.html')
