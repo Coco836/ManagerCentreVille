@@ -102,3 +102,19 @@ handleNavBar();
 window.addEventListener("resize", function () {
   handleNavBar();
 });
+
+// Écouteur d'événement sur le document pour fermer le menu si un clic en dehors du menu est détecté
+document.addEventListener("click", function (event) {
+  const menu = document.getElementById("navBarMenu");
+  const boutonMenu = document.getElementById("burgerBtn");
+  const cible = event.target; // L'élément qui a été cliqué
+  const clicDansMenu = menu.contains(cible);
+  const clicSurBoutonMenu = boutonMenu.contains(cible);
+  if (
+    !clicDansMenu &&
+    !clicSurBoutonMenu &&
+    menu.classList.contains("showMenu")
+  ) {
+    toggleMenu(); // Fermer le menu
+  }
+});
