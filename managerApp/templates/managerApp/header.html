@@ -12,22 +12,34 @@
       </button>
       <!-- Menu de navigation -->
       <ul id="navBarMenu" class="navBarMenu-desktop">
-        <li class="{% if active_page == 'home' %}active-page{% endif %}">
+        <li
+          class="{% if active_page == 'home' %}active-page{% endif %}"
+          onclick="toggleMenu()"
+        >
           <a href="{% url 'home' %}"
             ><i class="fa-solid fa-house"></i>&nbsp; Accueil</a
           >
         </li>
-        <li class="{% if active_page == 'blog' %}active-page{% endif %}">
+        <li
+          class="{% if active_page == 'blog' %}active-page{% endif %}"
+          onclick="toggleMenu()"
+        >
           <a href="{% url 'blog' %}"
             ><i class="fa-solid fa-newspaper"></i>&nbsp; Blog</a
           >
         </li>
-        <li class="{% if active_page == 'about' %}active-page{% endif %}">
+        <li
+          class="{% if active_page == 'about' %}active-page{% endif %}"
+          onclick="toggleMenu()"
+        >
           <a href="{% url 'about' %}"
             ><i class="fa-solid fa-user-group"></i>&nbsp; A propos</a
           >
         </li>
-        <li class="{% if active_page == 'contact' %}active-page{% endif %}">
+        <li
+          class="{% if active_page == 'contact' %}active-page{% endif %}"
+          onclick="toggleMenu()"
+        >
           <a href="{% url 'contact' %}"
             ><i class="fa-solid fa-envelope"></i>&nbsp; Contact</a
           >
