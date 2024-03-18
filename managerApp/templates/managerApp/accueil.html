@@ -192,22 +192,58 @@
           </ul>
         </div>
         <div class="space-intrasection-visual image-div-container">
-          <img
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="{% static 'images/accueil/illustrations/redynamisation_desktop.webp' %}"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="{% static 'images/accueil/illustrations/redynamisation_tablet.webp' %}"
+            />
+            <img
+              class="image-text"
+              loading="lazy"
+              src="{% static 'images/accueil/illustrations/redynamisation_mobile.webp' %}"
+              alt="Pourquoi un Manager de Centre-ville est Essentiel à la
+              Redynamisation du Centre-Ville ?"
+            />
+          </picture>
+
+          <!-- <img
             class="image-text"
             loading="lazy"
             src="{% static 'images/accueil/illustrations/redynamisation.webp' %}"
             alt="Pourquoi un Manager de Centre-ville est Essentiel à la
             Redynamisation du Centre-Ville ?"
-          />
+          /> -->
         </div>
         <div class="space-intrasection-visual image-div-container">
-          <img
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="{% static 'images/accueil/illustrations/vision_strat_desktop.webp' %}"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="{% static 'images/accueil/illustrations/vision_strat_tablet.webp' %}"
+            />
+            <img
+              class="image-text"
+              loading="lazy"
+              src="{% static 'images/accueil/illustrations/vision_strat_mobile.webp' %}"
+              alt="Comment un Manager de Centre-ville Développe-t-il une Vision
+              Stratégique pour le Centre-Ville ?"
+            />
+          </picture>
+
+          <!-- <img
             class="image-text"
             loading="lazy"
             src="{% static 'images/accueil/illustrations/vision_strat.webp' %}"
             alt="Comment un Manager de Centre-ville Développe-t-il une Vision
             Stratégique pour le Centre-Ville ?"
-          />
+          /> -->
         </div>
         <div class="space-intrasection-text right-align">
           <h3>
@@ -310,12 +346,28 @@
           </p>
         </div>
         <div class="space-intrasection-visual image-div-container">
-          <img
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="{% static 'images/accueil/illustrations/observatoire2_desktop.webp' %}"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="{% static 'images/accueil/illustrations/observatoire2_tablet.webp' %}"
+            />
+            <img
+              class="image-text"
+              loading="lazy"
+              src="{% static 'images/accueil/illustrations/observatoire2_mobile.webp' %}"
+              alt="Analyse et Observatoire de commerce de centre-ville"
+            />
+          </picture>
+          <!-- <img
             class="image-text"
             loading="lazy"
             src="{% static 'images/accueil/illustrations/observatoire2.webp' %}"
             alt="Analyse et Observatoire de commerce de centre-ville"
-          />
+          /> -->
         </div>
       </section>
 
@@ -328,13 +380,30 @@
       <section id="section4" class="section">
         <h2>Promotion de la petite ville de demain</h2>
         <div class="space-intrasection-visual image-div-container">
-          <img
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="{% static 'images/accueil/illustrations/prospection_desktop.webp' %}"
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="{% static 'images/accueil/illustrations/prospection_tablet.webp' %}"
+            />
+            <img
+              class="image-text"
+              loading="lazy"
+              src="{% static 'images/accueil/illustrations/prospection_mobile.webp' %}"
+              alt="Promotion de la petite ville de demain"
+            />
+          </picture>
+
+          <!-- <img
             class="image-text"
             loading="lazy"
             src="{% static 'images/accueil/illustrations/prospection.webp' %}"
             alt="Promotion de la petite ville de demain
               "
-          />
+          /> -->
         </div>
 
         <div class="space-intrasection-text right-align">
@@ -372,7 +441,7 @@
             <img
               class="icon-app-presentation"
               loading="lazy"
-              src="{% static 'images/accueil/formation-commerce.webp' %}"
+              src="{% static 'images/accueil/formation-commerce_resized.webp' %}"
               alt="Accès aux Formations pour les Commerçants"
             />
             <h3>Introduction aux Formations en Management de Centre-Ville</h3>
@@ -412,7 +481,7 @@
             <img
               class="icon-app-presentation"
               loading="lazy"
-              src="{% static 'images/accueil/plateforme-citoyens.webp' %}"
+              src="{% static 'images/accueil/plateforme-citoyens_resized.webp' %}"
               alt="Plateforme Complète pour les Citoyens"
             />
             <h3>Plateforme Complète pour les Citoyens</h3>
@@ -441,7 +510,7 @@
             <img
               class="icon-app-presentation"
               loading="lazy"
-              src="{% static 'images/accueil/gestionnaire-event.webp' %}"
+              src="{% static 'images/accueil/gestionnaire-event_resized.webp' %}"
               alt="Gestionnaire d'évènements"
             />
             <h3>Gestionnaire d'Évènements</h3>
@@ -464,7 +533,7 @@
             <img
               class="icon-app-presentation"
               loading="lazy"
-              src="{% static 'images/accueil/observatoire-commerce.webp' %}"
+              src="{% static 'images/accueil/observatoire-commerce_resized.webp' %}"
               alt="Observatoire de Commerce"
             />
             <h3>Observatoire de Commerce</h3>
@@ -486,7 +555,7 @@
             <img
               class="icon-app-presentation"
               loading="lazy"
-              src="{% static 'images/accueil/intelligence-artificielle.webp' %}"
+              src="{% static 'images/accueil/intelligence-artificielle_resized.webp' %}"
               alt="Intelligence Artificielle pour l'Analyse Commerciale"
             />
             <h3>Intelligence Artificielle pour l'Analyse Commerciale</h3>
