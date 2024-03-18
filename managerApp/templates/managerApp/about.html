@@ -139,7 +139,11 @@
     {% include "./footer.html" %}
     <canvas id="canvas"></canvas>
   </body>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" sync defer></script>
-  <script src="https://unpkg.com/flubber" sync defer></script>
-  <script src="{% static 'js/common.js' %}" type="module"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    async
+    defer
+  ></script>
+  <script src="https://unpkg.com/flubber" async defer></script>
+  <script src="{% static 'js/common.js' %}" async defer type="module"></script>
 </html>
