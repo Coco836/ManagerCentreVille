@@ -49,14 +49,14 @@
             controls=""
             poster="{% static 'images/accueil/commerce2.webp' %}"
           >
-            <source src="static/videos/presentation.mp4" type="video/mp4" />
+            <source src="static/videos/presentation.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>
         <div id="imgSection0">
           <video
             id="svg-mask"
-            src="static/videos/presentation.mp4"
+            src="static/videos/presentation.webm"
             autoplay
             muted
             class="video-clip svg-video-fill"
@@ -684,12 +684,8 @@
     </template>
     <canvas id="canvas"></canvas>
   </body>
-  <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    async
-    defer
-  ></script>
-  <script src="https://unpkg.com/flubber" async defer></script>
-  <script src="{% static 'js/common.js' %}" async defer type="module"></script>
-  <script src="{% static 'js/accueil.js' %}" type="module" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://unpkg.com/flubber" defer></script>
+  <script src="{% static 'js/common.js' %}" defer type="module"></script>
+  <script src="{% static 'js/accueil.js' %}" type="module" defer></script>
 </html>
