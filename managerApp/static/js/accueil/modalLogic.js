@@ -43,13 +43,13 @@ function setupModalEventListeners() {
         if (item.classList.contains("play-demo")) {
           const videoInfo = {
             "plateforme-citoyens":
-              "https://www.youtube.com/embed/9vcHJTbel9s?&mute=1",
+              "https://www.youtube.com/embed/9vcHJTbel9s?&mute=1&autoplay=1",
             "gestion-events":
-              "https://www.youtube.com/embed/uefDxXB35bQ?&mute=1",
+              "https://www.youtube.com/embed/uefDxXB35bQ?&mute=1&autoplay=1",
             "observatoire-commerce":
-              "https://www.youtube.com/embed/W9gOhIsv6HQ?&mute=1",
+              "https://www.youtube.com/embed/W9gOhIsv6HQ?&mute=1&autoplay=1",
             "analyse-commerciale":
-              "https://www.youtube.com/embed/LidD6Dpr6SU?&mute=1",
+              "https://www.youtube.com/embed/LidD6Dpr6SU?&mute=1&autoplay=1",
           };
           const key = Object.keys(videoInfo).find((key) =>
             item.classList.contains(key)
