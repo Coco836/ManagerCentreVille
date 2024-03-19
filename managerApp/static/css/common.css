@@ -288,21 +288,35 @@ section {
 
 /* FOOTER */
 
+footer {
+  padding-bottom: 10px;
+}
+
 #footerContent {
   background-color: #1d5f5fbd;
   position: relative;
   z-index: 2;
   padding: 10px;
   height: 40px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   place-content: center;
-
   a {
     text-decoration: none;
     color: #ffff;
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1858px) {
+  #footerContent {
+    width: 1504px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+
+    position: relative;
   }
 }
 
@@ -321,14 +335,5 @@ section {
 @media screen and (min-width: 1025px) {
   footer {
     margin: 50px 150px 0 150px;
-  }
-}
-
-@media screen and (min-width: 1858px) {
-  footer {
-    width: 1504px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
   }
 }
