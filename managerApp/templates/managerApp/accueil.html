@@ -688,5 +688,22 @@
   </body>
   <script src="{% static 'js/common.js' %}" type="module"></script>
   <script src="{% static 'js/accueil.js' %}" type="module"></script>
-  <script src="https://unpkg.com/flubber"></script>
+  <script type="text/javascript">
+    function chargerFlubberPourGrandsEcrans() {
+      // Définir la largeur minimale pour les grands écrans
+      var largeurMinGrandsEcrans = 1314;
+
+      // Vérifier si la largeur de l'écran est supérieure à la largeur minimale pour les grands écrans
+      if (window.innerWidth > largeurMinGrandsEcrans) {
+        // Créer une balise script pour Flubber
+        var scriptFlubber = document.createElement("script");
+        scriptFlubber.type = "text/javascript";
+        scriptFlubber.src = "https://unpkg.com/flubber"; // URL du script Flubber
+        document.body.appendChild(scriptFlubber);
+      }
+    }
+
+    // Appeler la fonction au chargement de la page
+    window.onload = chargerFlubberPourGrandsEcrans;
+  </script>
 </html>
