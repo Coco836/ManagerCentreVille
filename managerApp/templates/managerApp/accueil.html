@@ -684,7 +684,16 @@
     </template>
     <canvas id="canvas"></canvas>
   </body>
-  <script src="https://unpkg.com/flubber" defer></script>
-  <script src="{% static 'js/common.js' %}" defer type="module"></script>
-  <script src="{% static 'js/accueil.js' %}" type="module" defer></script>
+  <script
+    src="{% static 'js/common.js' %}"
+    fetchpriority="high"
+    async
+    type="module"
+  ></script>
+  <script
+    src="{% static 'js/accueil.js' %}"
+    fetchpriority="auto"
+    type="module"
+  ></script>
+  <script src="https://unpkg.com/flubber" fetchpriority="hilowgh"></script>
 </html>
