@@ -3,26 +3,28 @@ export function toggleMenu() {
   const mainNav = document.getElementById("mainNav");
   const burgerBtn = document.getElementById("burgerBtn");
 
-  // Bascule les classes pour le menu et le nav
-  menu.classList.toggle("showMenu");
-  menu.classList.toggle("closeMenu");
-  mainNav.classList.toggle("nav-border-open");
-  mainNav.classList.toggle("nav-border-close");
+  if (mainNav.classList.contains("navbar-mobile")) {
+    // Bascule les classes pour le menu et le nav
+    menu.classList.toggle("showMenu");
+    menu.classList.toggle("closeMenu");
+    mainNav.classList.toggle("nav-border-open");
+    mainNav.classList.toggle("nav-border-close");
 
-  const isMenuShown = menu.classList.contains("showMenu");
-  burgerBtn.classList.add("change");
-  if (isMenuShown) {
-    mainNav.classList.add("show-menu-radius");
-  } else {
-    mainNav.classList.remove("show-menu-radius");
+    const isMenuShown = menu.classList.contains("showMenu");
+    burgerBtn.classList.add("change");
+    if (isMenuShown) {
+      mainNav.classList.add("show-menu-radius");
+    } else {
+      mainNav.classList.remove("show-menu-radius");
+    }
+
+    // Changement de l'icône avec temporisation
+    setTimeout(() => {
+      // Utilisation d'une ternaire pour déterminer le caractère de l'icône
+      burgerBtn.innerHTML = isMenuShown ? "&#x2715;" : "&#9776;";
+      burgerBtn.classList.remove("change");
+    }, 300); // Assurez-vous que la temporisation correspond à la durée de la transition CSS
   }
-
-  // Changement de l'icône avec temporisation
-  setTimeout(() => {
-    // Utilisation d'une ternaire pour déterminer le caractère de l'icône
-    burgerBtn.innerHTML = isMenuShown ? "&#x2715;" : "&#9776;";
-    burgerBtn.classList.remove("change");
-  }, 300); // Assurez-vous que la temporisation correspond à la durée de la transition CSS
 }
 
 function handleNavBar() {
