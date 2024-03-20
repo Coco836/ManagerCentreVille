@@ -38,22 +38,6 @@ function setupModalEventListeners() {
     .querySelectorAll(".play-demo, .details-formation")
     .forEach((item) => {
       item.addEventListener("click", () => {
-        if (window.innerWidth < 1024) {
-          const element = document.querySelector("iframe");
-          if (element.requestFullscreen) {
-            element.requestFullscreen();
-          } else if (element.mozRequestFullScreen) {
-            /* Firefox */
-            element.mozRequestFullScreen();
-          } else if (element.webkitRequestFullscreen) {
-            /* Chrome, Safari & Opera */
-            element.webkitRequestFullscreen();
-          } else if (element.msRequestFullscreen) {
-            /* IE/Edge */
-            element.msRequestFullscreen();
-          }
-        }
-
         // Logique pour déterminer le contenu basé sur la classe de l'élément
         let content = "";
         if (item.classList.contains("play-demo")) {
