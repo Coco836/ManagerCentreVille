@@ -59,7 +59,7 @@ ROOT_URLCONF = "managerdecommerce.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        'DIRS': [os.path.join(BASE_DIR, 'stats/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'managerApp/templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
