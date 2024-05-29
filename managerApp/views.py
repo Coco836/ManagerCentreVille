@@ -37,8 +37,8 @@ def contact_view(request):
 
             email = EmailMessage(
                 subject=sujet,
-                body=f'Message de {nom} \n\n {message} \n\n \n\n Via Manager de Centre-Ville',
-                from_email='contact@link-co.fr',  # Votre adresse, utilisée pour l'authentification SMTP
+                body=f'Envoyé depuis "Manager de Centre-Ville". \n\n\n Message de {nom} \n\n {message}',
+                from_email=f'{nom} <{email}>',  # Votre adresse, utilisée pour l'authentification SMTP
                 to=['contact@link-co.fr'],  # À qui le mail est envoyé
                 headers={'Reply-To': email}  # L'adresse de l'expéditeur original
             )
