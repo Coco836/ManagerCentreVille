@@ -4,52 +4,49 @@ from django.core.mail import EmailMessage
 from .forms import ContactForm
 
 
-# # Create your views here.
+# Create your views here.
 def home_view(request):
-    return render(request, 'managerApp/home.html')
+    return render(request, 'managerApp/accueil.html', {'active_page': 'home'})
 
-# def home_view(request):
-#     return render(request, 'managerApp/accueil.html', {'active_page': 'home'})
+def blog_view(request):
+    json_data = load_json_data()
+    first_articles_preview, others_articles_preview = get_articles_preview(json_data["articles"])
+    return render(request, 'managerApp/blog.html', {
+        'active_page': 'blog',
+        'first_articles_preview': first_articles_preview,
+        'others_articles_preview': others_articles_preview
+    })
 
-# def blog_view(request):
-#     json_data = load_json_data()
-#     first_articles_preview, others_articles_preview = get_articles_preview(json_data["articles"])
-#     return render(request, 'managerApp/blog.html', {
-#         'active_page': 'blog',
-#         'first_articles_preview': first_articles_preview,
-#         'others_articles_preview': others_articles_preview
-#     })
+def read_article_view(request, article_id):
+    articles = load_json_data()
+    article = next((article for article in articles["articles"] if article['id'] == article_id), None)
+    latest_articles_preview = get_latest_articles_preview(articles["articles"], article_id)
+    return render(request, 'managerApp/read_article.html', {'active_page': 'blog', 'article': article, 'latest_articles_preview': latest_articles_preview})
 
-# def read_article_view(request, article_id):
-#     articles = load_json_data()
-#     article = next((article for article in articles["articles"] if article['id'] == article_id), None)
-#     latest_articles_preview = get_latest_articles_preview(articles["articles"], article_id)
-#     return render(request, 'managerApp/read_article.html', {'active_page': 'blog', 'article': article, 'latest_articles_preview': latest_articles_preview})
+def about_view(request):
+    return render(request, 'managerApp/about.html', {'active_page': 'about'})
 
-# def about_view(request):
-#     return render(request, 'managerApp/about.html', {'active_page': 'about'})
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            nom = form.cleaned_data['nom']
+            sujet = form.cleaned_data['sujet']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
 
-# def contact_view(request):
-#     if request.method == 'POST':
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             nom = form.cleaned_data['nom']
-#             sujet = form.cleaned_data['sujet']
-#             email = form.cleaned_data['email']
-#             message = form.cleaned_data['message']
+            email = EmailMessage(
+                subject=sujet,
+                body=f'Envoyé depuis "Manager de Centre-Ville". \n\n\n Message de {nom} \n\n {message}',
+                from_email=f'{nom} <{email}>',  # Votre adresse, utilisée pour l'authentification SMTP
+                to=['contact@link-co.fr'],  # À qui le mail est envoyé
+                headers={'Reply-To': email}  # L'adresse de l'expéditeur original
+            )
+            email.send()
+            return redirect('home')  # Redirige vers une nouvelle URL en cas de succès
+    else:
+        form = ContactForm()
+    return render(request, 'managerApp/contact.html', {'active_page': 'contact', 'form': form})
 
-#             email = EmailMessage(
-#                 subject=sujet,
-#                 body=f'Envoyé depuis "Manager de Centre-Ville". \n\n\n Message de {nom} \n\n {message}',
-#                 from_email=f'{nom} <{email}>',  # Votre adresse, utilisée pour l'authentification SMTP
-#                 to=['contact@link-co.fr'],  # À qui le mail est envoyé
-#                 headers={'Reply-To': email}  # L'adresse de l'expéditeur original
-#             )
-#             email.send()
-#             return redirect('home')  # Redirige vers une nouvelle URL en cas de succès
-#     else:
-#         form = ContactForm()
-#     return render(request, 'managerApp/contact.html', {'active_page': 'contact', 'form': form})
-
-# def legal_mention_view(request):
-#     return render(request, 'managerApp/legal_mention.html')
+def legal_mention_view(request):
+    return render(request, 'managerApp/legal_mention.html')
