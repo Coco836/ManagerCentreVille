@@ -140,3 +140,42 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # EMAIL_USE_TLS = env("EMAIL_USE_TLS")
 # EMAIL_HOST_USER = env("EMAIL_HOST_USER")
 # EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+
+LOGGING_DIR = os.path.join(BASE_DIR, 'logs')
+if not os.path.exists(LOGGING_DIR):
+    os.makedirs(LOGGING_DIR)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'ERROR',  # Changez en 'DEBUG' pour le développement
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOGGING_DIR, 'django_errors.log'),
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'ERROR',  # Utilisez 'ERROR' ou 'WARNING' en production
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'ERROR',  # Changez en 'DEBUG' pour le développement
+            'propagate': True,
+        },
+    },
+}
